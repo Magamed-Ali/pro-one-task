@@ -1,26 +1,27 @@
 
-.userCard {
+.objectName{
     width: 900px;
-    margin: auto;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    border: darkgreen solid 1px;
+    justify-content: space-between;
+    margin: auto;
+    font-size: 14px;
 }
-
-.cards {
+.userСard{
     width: 250px;
+    height: 200px;
+    border: 1px solid #a30e0e;
+    margin: 10px;
     padding: 10px;
-    margin: 5px;
-    border: brown solid 1px;
 }
-.red{
-    background-color: red;
+.blockRed{
+    background: red;
 }
-.aqua{
-    background-color: rgba(0, 255, 255, 0.28);
+.blockGold{
+    background: gold;
 }
-.title {
-    font-size: 24px;
+.userСard div p{
+    padding: 2px;
+    margin: 0;
     text-align: center;
 }
