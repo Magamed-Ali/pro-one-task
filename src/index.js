@@ -9,7 +9,7 @@ const initialState ={
     todos: [],
     loading: false,
 };
-console.log()
+
 const reduser = (state = initialState, action) =>{
     switch (action.type){
         case 'load':

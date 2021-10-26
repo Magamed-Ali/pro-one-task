@@ -1,4 +1,3 @@
-
 export function loadTodos() {
     return function (dispatch) {
         dispatch({type: 'started'})
