@@ -23,6 +23,11 @@ const reduser = (state = initialState, action) =>{
                 ...state,
                 loading: true
             }
+        case 'delete':
+            return {
+                ...state,
+                todos: state.todos.filter((todo) => todo.id !== action.payload)
+            }
         default:
             return state;
     }
