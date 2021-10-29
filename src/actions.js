@@ -19,10 +19,15 @@ export const removeTodo = (id) => {
         })
             .then((response) => response.json())
             .then(json => {
-            dispatch({
-                type: 'delete',
-                payload: id
+                dispatch({
+                    type: 'delete',
+                    payload: id
+                })
             })
-        })
+    }
+}
+export const removetitle = (title) => {
+    return (dispatch) =>{
+        fetch(`https://jsonplaceholder.typicode.com/photos/`)
     }
 }

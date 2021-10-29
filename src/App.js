@@ -1,5 +1,5 @@
 import {useDispatch, useSelector} from "react-redux";
-import {loadTodos, removeTodo} from "./actions";
+import {loadTodos, removetitle, removeTodo} from "./actions";
 import {useEffect} from "react";
 import "./style.css"
 
@@ -14,6 +14,9 @@ function App() {
     const hendleDelete = (id) => {
         dispatch(removeTodo(id))
     }
+    const titleleDelete = (title)=>{
+        dispatch(removetitle())
+    }
     return (
         <div>
             Cписок дел:
@@ -23,10 +26,11 @@ function App() {
                     return (
                         <div className={`${"userСard"} ${todo.id > 3 && todo.id < 10 ? "blockRed" : "blockGold"}`}>
                             <div className="cardСontents"><p> Пользователь по счету № {todo.id}</p></div>
+                            <div><button onClick={()=> titleleDelete(todo.title)}>уд по заг</button></div>
                             <div className="cardСontents"><p>Заголовок</p> {todo.title}</div>
                             <div className="cardСontents"><p>Содержание</p>{todo.body}</div>
                             <div className="action">
-                                <button onClick={() => hendleDelete(todo.id)}>delite</button>
+                                <button onClick={()=> hendleDelete(todo.id)}>delite</button>
                             </div>
                         </div>
                     )
